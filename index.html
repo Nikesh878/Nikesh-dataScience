@@ -1,235 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nikesh Kumar | Data Science Portfolio</title>
+Create a modern, responsive personal portfolio website using HTML, CSS, and JavaScript.
 
-<style>
-:root{
-    --bg:#f4f6f9;
-    --text:#222;
-    --card:#ffffff;
-    --primary:#0a192f;
-    --accent:#64ffda;
-}
+Name: Nikesh Kumar
+Profession: B.Tech Student / Web Developer
+Location: India
 
-body.dark{
-    --bg:#0a192f;
-    --text:#ffffff;
-    --card:#112240;
-}
+Sections Required:
+1. Hero Section (with profile image, name, short intro, and typing animation)
+2. About Me section (short professional summary)
+3. Skills section (HTML, CSS, JavaScript, Python, C, C++)
+4. Projects section (3 project cards with title, description, and GitHub link)
+5. Resume Download Button (Download file name: Nikesh_Resume.pdf)
+6. Contact Section (Email, Phone, LinkedIn, GitHub)
+7. Footer with copyright
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-    scroll-behavior:smooth;
-}
+Extra Features:
+- Dark and Light Mode Toggle
+- Smooth Scroll Effect
+- Modern UI Design
+- Gradient background
+- Hover animation on buttons
+- Mobile Responsive
+- Clean professional layout
 
-body{
-    background:var(--bg);
-    color:var(--text);
-    transition:0.3s ease;
-}
-
-header{
-    text-align:center;
-    padding:40px 20px;
-    background:var(--primary);
-    color:white;
-}
-
-.profile-img{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid var(--accent);
-    margin-bottom:15px;
-    animation:fadeIn 1.5s ease;
-}
-
-nav{
-    text-align:center;
-    padding:15px;
-    background:#112240;
-}
-
-nav a{
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:var(--accent);
-}
-
-section{
-    padding:60px 10%;
-    animation:fadeUp 1s ease;
-}
-
-h2{
-    border-bottom:3px solid var(--accent);
-    display:inline-block;
-    margin-bottom:20px;
-}
-
-.card{
-    background:var(--card);
-    padding:20px;
-    margin:15px 0;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.skills span{
-    display:inline-block;
-    background:var(--primary);
-    color:white;
-    padding:8px 15px;
-    margin:5px;
-    border-radius:20px;
-    font-size:14px;
-}
-
-.btn{
-    display:inline-block;
-    padding:10px 20px;
-    margin:10px 10px 0 0;
-    background:var(--accent);
-    color:black;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-.toggle{
-    position:fixed;
-    top:20px;
-    right:20px;
-    background:var(--accent);
-    border:none;
-    padding:10px 15px;
-    cursor:pointer;
-    border-radius:5px;
-    font-weight:bold;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:var(--primary);
-    color:white;
-}
-
-@keyframes fadeIn{
-    from{opacity:0; transform:scale(0.8);}
-    to{opacity:1; transform:scale(1);}
-}
-
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-@media(max-width:768px){
-    section{padding:40px 5%;}
-}
-</style>
-</head>
-
-<body>
-
-<button class="toggle" onclick="toggleMode()">🌙 Toggle</button>
-
-<header>
-    <!-- Yaha apni photo ka naam daale (same folder me rakhe) -->
-    <img src="profile.jpg" alt="Nikesh Kumar" class="profile-img">
-    <h1>Nikesh Kumar</h1>
-    <p>Aspiring Data Scientist | Machine Learning Enthusiast</p>
-</header>
-
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-        Computer Science engineering student passionate about Data Science, 
-        Machine Learning, and AI. I enjoy solving real-world problems using data-driven solutions.
-        </p>
-        <a href="Nikesh_Resume.pdf" class="btn" download>📄 Download Resume</a>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="card">
-        <h3>Stock Price Prediction Web App</h3>
-        <p>Time-series forecasting using Python, Streamlit, and Prophet.</p>
-    </div>
-
-    <div class="card">
-        <h3>COVID-19 Vaccine Data Analysis</h3>
-        <p>Data analysis using Pandas, NumPy, Matplotlib, Seaborn.</p>
-    </div>
-
-    <div class="card">
-        <h3>Sales Dashboard (SQL + Power BI)</h3>
-        <p>Interactive dashboard with SQL data cleaning.</p>
-    </div>
-</section>
-
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Machine Learning</span>
-        <span>Deep Learning</span>
-        <span>Pandas</span>
-        <span>NumPy</span>
-        <span>NLP</span>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="card">
-        <p>Email: nikeshkumar12032002@gmail.com</p>
-        <p>Location: Bihar, India</p>
-
-        <a href="https://linkedin.com/in/nikesh-kumar-7a6b95237" target="_blank" class="btn">LinkedIn</a>
-        <a href="https://github.com/Nikesh878" target="_blank" class="btn">GitHub</a>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Nikesh Kumar | Data Science Portfolio</p>
-</footer>
-
-<script>
-function toggleMode(){
-    document.body.classList.toggle("dark");
-}
-</script>
-
-</body>
-</html>
+Use internal CSS and JavaScript in single file.
+Add animation and modern styling.
+Make it attractive and professional.
