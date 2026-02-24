@@ -77,7 +77,9 @@
         }
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             padding: 0.8rem 2rem;
             background: var(--gradient);
             color: #fff;
@@ -92,6 +94,13 @@
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+            color: #fff;
+        }
+
+        /* Nav specific button sizing */
+        .nav-btn {
+            padding: 0.5rem 1.2rem;
+            font-size: 0.9rem;
         }
 
         /* === Navbar === */
@@ -123,6 +132,7 @@
         .nav-links {
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
 
         .nav-links a {
@@ -264,7 +274,7 @@
         .about-content p {
             color: var(--text-muted);
             font-size: 1.1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         /* === Skills Section === */
@@ -448,6 +458,10 @@
             .section-title {
                 font-size: 2rem;
             }
+            
+            .nav-btn {
+                display: none; /* Hide navbar button on mobile to prevent clutter */
+            }
         }
     </style>
 </head>
@@ -464,6 +478,10 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div style="display: flex; gap: 1rem; align-items: center;">
+            <!-- Added Navbar Resume Download Button -->
+            <a href="Nikesh Kumar Resume.pdf" download="Nikesh Kumar Resume.pdf" class="btn nav-btn">
+                <i class="fa-solid fa-file-pdf"></i> Resume
+            </a>
             <button class="theme-toggle" id="theme-toggle">
                 <i class="fa-solid fa-sun"></i>
             </button>
@@ -483,7 +501,8 @@
                     And I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span>
                 </div>
                 <p>Based in Bihar, India, I am a dedicated Computer Science Engineering student with a strong passion for Data Science, Machine Learning, and turning complex data into actionable insights.</p>
-                <a href="Nikesh_Resume.pdf" download="Nikesh_Resume.pdf" class="btn">
+                <!-- Updated filename to match your exact file -->
+                <a href="Nikesh Kumar Resume.pdf" download="Nikesh Kumar Resume.pdf" class="btn">
                     <i class="fa-solid fa-download"></i> Download Resume
                 </a>
             </div>
@@ -503,6 +522,13 @@
             <p>I am a motivated and dedicated Computer Science Engineering student at Motihari Engineering College, Bihar, with a deep passion for Data Science and Machine Learning.</p>
             <p>Recently, I completed an internship at RCPL where I developed interactive Power BI dashboards using automated reporting data, successfully driving new initiatives and achieving project goals.</p>
             <p>Equipped with certifications in Generative AI and advanced computing, I am constantly exploring new algorithms and technologies to solve real-world problems. Focused on Growth | Dedicated to Excellence | Ready to Innovate.</p>
+            
+            <!-- Added Download Resume Button in About Section -->
+            <div style="margin-top: 2rem;">
+                <a href="Nikesh Kumar Resume.pdf" download="Nikesh Kumar Resume.pdf" class="btn">
+                    <i class="fa-solid fa-file-arrow-down"></i> Get Full Resume
+                </a>
+            </div>
         </div>
     </section>
 
